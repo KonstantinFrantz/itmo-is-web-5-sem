@@ -4,10 +4,7 @@
   }
 
   window.addEventListener('load', function() {
-    var loadTime;
-
-    var navigationEntry = performance.getEntriesByType('navigation')[0];
-    loadTime = navigationEntry.loadEventEnd - navigationEntry.startTime;
+    const loadTime = performance.now();
 
     var loadTimeFormatted = formatLoadTime(loadTime);
 

@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         if (selectedCharacter === 'walter') {
           if (message.toLowerCase() === 'heisenberg') {
-            addMessage("You're goddamn right.", selectedCharacter, selectedCharacter);
+            addMessage("You're goddamn right.", selectedCharacter);
           } else {
             addMessage("Say my name.", selectedCharacter);
           }
@@ -196,5 +196,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  setTimeout(openChatWidget, 100);
+  setTimeout(openChatWidget, 5000);
 });

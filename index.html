@@ -10,6 +10,7 @@
     <script src="js/chat.js"></script>
     <script src="js/load_time.js"></script>
     <script src="js/videos.js"></script>
+    <script src="js/reviews.js"></script>
   </head>
   <body>
     <div class="background-image"></div>
@@ -113,25 +114,12 @@
           <section id="reviews" class="reviews">
             <div class="reviews_wrapper">
               <h2>Customer Reviews</h2>
-              <div class="reviews_testimonials">
-                <div class="testimonial">
-                  <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2020/02/Bryan-Cranston-as-Walter-White-in-Breaking-Bad.jpg" alt="Walter White" class="testimonial_img">
-                  <p><strong>Walter White</strong></p>
-                  <p>"Without this man, I would have died of cancer in prison!"</p>
-                </div>
-                <div class="testimonial">
-                  <img src="https://upload.wikimedia.org/wikipedia/en/e/ea/Mike_Ehrmantraut_BCS_S3.png" alt="Mike Ehrmantraut" class="testimonial_img">
-                  <p><strong>Mike Ehrmantraut</strong></p>
-                  <p>"Saved me from sexual abuse, thank you!"</p>
-                </div>
-                <div class="testimonial">
-                  <img src="https://i.insider.com/5d9f454ee94e865e924818da?width=1300&amp;format=jpeg&amp;auto=webp" alt="Jesse Pinkman" class="testimonial_img">
-                  <p><strong>Jesse Pinkman</strong></p>
-                  <p>"Yo, love that guy!"</p>
-                </div>
+              <div class="reviews_testimonials" id="reviews_testimonials">
               </div>
+              <div id="preloader" class="preloader"></div>
+              <button id="loadMoreBtn">Load More Reviews</button>
               <h3>Leave a Review</h3>
-              <form>
+              <form id="reviewForm">
                 <div class="form-group">
                   <input type="text" name="name" placeholder="Your Name" required="">
                 </div>
@@ -142,113 +130,10 @@
               </form>
             </div>
           </section>
-          <section id="schedule" class="schedule">
-            <div class="schedule_wrapper">
-              <h2>Weekly Schedule</h2>
-              <div class="table">
-                <div class="table_row table_header">
-                  <div class="table_cell">Day</div>
-                  <div class="table_cell">9 AM - 11 AM</div>
-                  <div class="table_cell">11 AM - 1 PM</div>
-                  <div class="table_cell">2 PM - 4 PM</div>
-                </div>
-                <div class="table_row">
-                  <div class="table_cell">Monday</div>
-                  <div class="table_cell">Consultations</div>
-                  <div class="table_cell">Court Appearance</div>
-                  <div class="table_cell">Office Work</div>
-                </div>
-                <div class="table_row">
-                  <div class="table_cell">Tuesday</div>
-                  <div class="table_cell">Client Meetings</div>
-                  <div class="table_cell">Legal Research</div>
-                  <div class="table_cell">Court Preparation</div>
-                </div>
-                <div class="table_row">
-                  <div class="table_cell">Wednesday</div>
-                  <div class="table_cell">Case Reviews</div>
-                  <div class="table_cell">Court Appearance</div>
-                  <div class="table_cell">Office Work</div>
-                </div>
-                <div class="table_row">
-                  <div class="table_cell">Thursday</div>
-                  <div class="table_cell">Client Consultations</div>
-                  <div class="table_cell">Legal Writing</div>
-                  <div class="table_cell">Court Preparation</div>
-                </div>
-                <div class="table_row">
-                  <div class="table_cell">Friday</div>
-                  <div class="table_cell">Court Appearance</div>
-                  <div class="table_cell">Client Meetings</div>
-                  <div class="table_cell">Office Work</div>
-                </div>
-                <div class="table_row">
-                  <div class="table_cell">Saturday</div>
-                  <div class="table_cell">Office Hours</div>
-                  <div class="table_cell">Legal Consultations</div>
-                  <div class="table_cell">Case Follow-ups</div>
-                </div>
-                <div class="table_row">
-                  <div class="table_cell">Sunday</div>
-                  <div class="table_cell">Rest Day</div>
-                  <div class="table_cell">Rest Day</div>
-                  <div class="table_cell">Rest Day</div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section id="appointment" class="appointment">
-            <div class="appointment_wrapper">
-              <h2>Book an Appointment</h2>
-              <form>
-                <div class="form-group">
-                  <input type="text" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                  <input type="date" name="date" required>
-                </div>
-                <button type="submit">Book</button>
-              </form>
-            </div>
-          </section>
-        </div>
-      </main>
 
-      <div id="chatWidget" class="chat-widget">
-        <div class="chat-header">
-          <div class="character-selection">
-            <div class="character-icon-wrapper" data-character="saul">
-              <img src="images/saul_gif.gif" alt="Saul Goodman" class="character-icon">
-              <span class="character-label">Saul</span>
-            </div>
-            <div class="character-icon-wrapper" data-character="walter">
-              <img src="images/walter_gif.gif" alt="Walter White" class="character-icon">
-              <span class="character-label">Walter</span>
-            </div>
+          <div id="minimizedChat" class="minimized-chat">
+            <img src="images/saul_gif.gif" alt="Saul Goodman" class="saul-gif">
           </div>
-          <span class="minimize-button">&times;</span>
-        </div>
-        <div class="chat-body">
-          <div class="chat-messages" id="chatMessages">
-            <div class="message saul">
-              <img src="images/saul_gif.gif" alt="Saul Goodman" class="saul-gif">
-              <p>Hi!<br>Saul Goodman here, need help?</p>
-            </div>
-          </div>
-        </div>
-        <div class="chat-input">
-          <input type="text" id="userInput" placeholder="Your message...">
-          <button id="sendButton">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div id="minimizedChat" class="minimized-chat">
-        <img src="images/saul_gif.gif" alt="Saul Goodman" class="saul-gif">
-      </div>
 
       <footer class="footer">
         <div class="footer_content">

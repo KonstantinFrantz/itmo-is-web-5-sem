@@ -1,18 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const videoItems = document.querySelectorAll('.video_item');
-  const activeVideoFrame = document.getElementById('activeVideoFrame');
-
-  videoItems.forEach(item => {
-    item.addEventListener('click', () => {
-      if (item.classList.contains('active')) return;
-
-      videoItems.forEach(el => el.classList.remove('active'));
-      
-      item.classList.add('active');
-      
-      const videoId = item.querySelector('.video_thumbnail').getAttribute('data-video');
-      
-      activeVideoFrame.src = `https://www.youtube.com/embed/${videoId}`;
-    });
+  // Swiper initialization
+  // Args: swiper class name, options json
+  var swiper = new Swiper('.swiper', {
+    slidesPerView: 1, // Number of videos per view
+    navigation: {
+      nextEl: '.swiper-button-next', // Next video button
+      prevEl: '.swiper-button-prev', // Previous video button
+    },
+    pagination: {
+      el: '.swiper-pagination', // Adding the pugination box
+      clickable: true,          // Making pugination buttons clickable
+    },
+    grabCursor: true,     // Changing cursor to "grab" style
+    touchAngle: 45,       // Changing angle to swipe
   });
 });

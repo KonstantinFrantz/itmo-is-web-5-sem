@@ -5,8 +5,13 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Saul,Goodman,lawyer,breaking,bad,rights,court">
     <meta name="description" content="Saul Goodman's personal site">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Bebas+Neue&family=Cagliostro&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/chat.js"></script>
     <script src="js/load_time.js"></script>
     <script src="js/videos.js"></script>
@@ -40,6 +45,7 @@
 
       <main>
         <div class="main_content">
+
           <section id="about" class="about">
             <div class="about_wrapper">
               <div class="about_text">
@@ -84,31 +90,40 @@
           <section id="videos" class="videos">
             <div class="videos_wrapper">
               <h2>Watch My Videos</h2>
-              <div class="videos_menu">
-                <div class="videos_list">
-                  <div class="video_item active">
-                    <img src="images/video1_thumbnail.jpg" alt="Commercial" class="video_thumbnail" data-video="wqnHtGgVAUE">
-                    <p>Commercial</p>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="video-slide">
+                      <p>Commercial</p>
+                      <iframe src="https://www.youtube.com/embed/wqnHtGgVAUE" frameborder="0" allowfullscreen></iframe>
+                    </div>
                   </div>
-                  <div class="video_item">
-                    <img src="images/video2_thumbnail.jpg" alt="Did I Murder an Old Man?" class="video_thumbnail" data-video="j3DY1_zijgA">
-                    <p>Did I Murder an Old Man?</p>
+                  <div class="swiper-slide">
+                    <div class="video-slide">
+                      <p>Did I Murder an Old Man?</p>
+                      <iframe src="https://www.youtube.com/embed/j3DY1_zijgA" frameborder="0" allowfullscreen></iframe>
+                    </div>
                   </div>
-                  <div class="video_item">
-                    <img src="images/video4_thumbnail.jpg" alt="Sue 'Em Now" class="video_thumbnail" data-video="pPd67CEL54E">
-                    <p>Sue 'Em Now</p>
+                  <div class="swiper-slide">
+                    <div class="video-slide">
+                      <p>Sue 'Em Now</p>
+                      <iframe src="https://www.youtube.com/embed/pPd67CEL54E" frameborder="0" allowfullscreen></iframe>
+                    </div>
                   </div>
-                  <div class="video_item">
-                    <img src="images/video3_thumbnail.jpg" alt="Tiger Trouble?" class="video_thumbnail" data-video="ll7GSiad0ko">
-                    <p>Tiger Trouble?</p>
+                  <div class="swiper-slide">
+                    <div class="video-slide">
+                      <p>Tiger Trouble?</p>
+                      <iframe src="https://www.youtube.com/embed/ll7GSiad0ko" frameborder="0" allowfullscreen></iframe>
+                    </div>
                   </div>
                 </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <div class="swiper-pagination"></div>
               </div>
 
-              <div class="active_video">
-                <iframe id="activeVideoFrame" src="https://www.youtube.com/embed/wqnHtGgVAUE" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
           </section>
 
           <section id="reviews" class="reviews">
@@ -131,25 +146,59 @@
             </div>
           </section>
 
+          <div id="chatWidget" class="chat-widget">
+            <div class="chat-header">
+              <div class="character-selection">
+                <div class="character-icon-wrapper" data-character="saul">
+                  <img src="images/saul_gif.gif" alt="Saul Goodman" class="character-icon">
+                  <span class="character-label">Saul</span>
+                </div>
+                <div class="character-icon-wrapper" data-character="walter">
+                  <img src="images/walter_gif.gif" alt="Walter White" class="character-icon">
+                  <span class="character-label">Walter</span>
+                </div>
+              </div>
+              <span class="minimize-button">&times;</span>
+            </div>
+            <div class="chat-body">
+              <div class="chat-messages" id="chatMessages">
+                <div class="message saul">
+                  <img src="images/saul_gif.gif" alt="Saul Goodman" class="saul-gif">
+                  <p>Hi!<br>Saul Goodman here, need help?</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat-input">
+              <input type="text" id="userInput" placeholder="Your message...">
+              <button id="sendButton">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
           <div id="minimizedChat" class="minimized-chat">
             <img src="images/saul_gif.gif" alt="Saul Goodman" class="saul-gif">
           </div>
 
-      <footer class="footer">
-        <div class="footer_content">
-          <div class="footer_contact">
-            <h3>Contact Information</h3>
-            <p>Phone: +7-228-239-13-37</p>
-            <p>Email: saulgoodman@edu.itmo.ru</p>
-            <p>Address: Vyasemskiy 3-5, University Campus, ITMO</p>
-          </div>
-          <div class="footer_disclaimer">
-            <p><del>Disclaimer:</del><br>Saul Goodman <strong>does not guarantee</strong> that you will not be kicked out of uni,<br> but <em>rest assured</em>, he’ll fight like hell for you!</p>
-          </div>
-          <div class="footer_load_info"></div>
         </div>
-      </footer>
 
+        <footer class="footer">
+          <div class="footer_content">
+            <div class="footer_contact">
+              <h3>Contact Information</h3>
+              <p>Phone: +7-228-239-13-37</p>
+              <p>Email: saulgoodman@edu.itmo.ru</p>
+              <p>Address: Vyasemskiy 3-5, University Campus, ITMO</p>
+            </div>
+            <div class="footer_disclaimer">
+              <p><del>Disclaimer:</del><br>Saul Goodman <strong>does not guarantee</strong> that you will not be kicked out of uni,<br> but <em>rest assured</em>, he’ll fight like hell for you!</p>
+            </div>
+            <div class="footer_load_info"></div>
+          </div>
+        </footer>
+      </main>
     </div>
   </body>
 </html>

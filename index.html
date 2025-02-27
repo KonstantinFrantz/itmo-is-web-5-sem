@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Saul Goodman</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Saul,Goodman,lawyer,breaking,bad,rights,court">
+    <meta name="description" content="Saul Goodman's personal site">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Bebas+Neue&family=Cagliostro&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/load_time.js"></script>
+    <script src="js/videos.js"></script>
+    <script src="js/reviews.js"></script>
+  </head>
+  <body>
+    <div class="background-image"></div>
+
+    <div class="container">
+      <header class="header">
+        <div class="header_content">
+          <div class="header_logo">
+            <img src="https://1000logos.net/wp-content/uploads/2023/09/Better-Call-Saul-Logo.png" alt="Better Call Saul Logo">
+          </div>
+          <nav class="header_nav">
+            <ul class="header_menu">
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#success">Success Formula</a></li>
+              <li><a href="#videos">Videos</a></li>
+              <li><a href="#reviews">Reviews</a></li>
+              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#appointment">Appointment</a></li>
+            </ul>
+          </nav>
+          <div class="header_phone">
+            <p>Call us: +7-228-239-13-37</p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="main_content">
+
+          <section id="about" class="about">
+            <div class="about_wrapper">
+              <div class="about_text">
+                <h1>Hi, I'm Saul Goodman</h1>
+                <p><b>Did you know students have rights?</b> Mayatin says you do, <em>and so do I</em>.<br>
+                  <strong>I believe</strong> that until proven guilty, <ins>every student</ins> is <strong>innocent</strong>.<br>
+                  And that's why I fight for you, <i>ITMO!</i></p>
+              </div>
+              <div class="about_image-container">
+                <img src="images/output-onlinepngtools.png" alt="Saul Goodman">
+              </div>
+            </div>
+          </section>
+
+          <section id="services" class="services">
+            <div class="services_wrapper">
+              <h2>Have a problem?</h2>
+              <ul class="services_list">
+                <li><span class="services_icon">✔️</span> Academic misconduct charges?</li>
+                <li><span class="services_icon">✔️</span> Disciplinary action for missed exams or deadlines?</li>
+                <li><span class="services_icon">✔️</span> Wrongfully accused of plagiarism?</li>
+                <li><span class="services_icon">✔️</span> Rent disputes with your landlord?</li>
+                <li><span class="services_icon">✔️</span> Legal trouble on campus? <strong>I've got your back!</strong></li>
+              </ul>
+            </div>
+
+            <aside>
+              <div class="quote_content">
+                <p><q><em>Your honor</em>, if my client is what he eats, then he is a <strong>kebab from Sher</strong></q><br>
+                  <sup>©</sup>Best lawyer in the world</p>
+              </div>
+            </aside>
+          </section>
+
+          <section id="success" class="success">
+            <div class="success_wrapper">
+              <h2>My success formula</h2>
+              <p><strong>Success = <em>Bribe</em> + <b>Blackmail</b> - <ins>Moral</ins></strong></p>
+            </div>
+          </section>
+
+          <section id="videos" class="videos">
+            <div class="videos_wrapper">
+              <h2>Watch My Videos</h2>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="video-slide">
+                      <p>Commercial</p>
+                      <iframe src="https://www.youtube.com/embed/wqnHtGgVAUE" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="video-slide">
+                      <p>Did I Murder an Old Man?</p>
+                      <iframe src="https://www.youtube.com/embed/j3DY1_zijgA" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="video-slide">
+                      <p>Sue 'Em Now</p>
+                      <iframe src="https://www.youtube.com/embed/pPd67CEL54E" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="video-slide">
+                      <p>Tiger Trouble?</p>
+                      <iframe src="https://www.youtube.com/embed/ll7GSiad0ko" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <div class="swiper-pagination"></div>
+              </div>
+
+          </section>
+
+          <section id="reviews" class="reviews">
+            <div class="reviews_wrapper">
+              <h2>Customer Reviews</h2>
+              <div class="reviews_testimonials" id="reviews_testimonials">
+              </div>
+              <div id="preloader" class="preloader"></div>
+              <button id="loadMoreBtn">Load More Reviews</button>
+              <h3>Leave a Review</h3>
+              <form id="reviewForm">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Your Name" required="">
+                </div>
+                <div class="form-group">
+                  <textarea name="review" placeholder="Your Review" required=""></textarea>
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </section>
+
+          <div id="chatWidget" class="chat-widget">
+            <div class="chat-header">
+              <div class="character-selection">
+                <div class="character-icon-wrapper" data-character="saul">
+                  <img src="images/saul_gif.gif" alt="Saul Goodman" class="character-icon">
+                  <span class="character-label">Saul</span>
+                </div>
+                <div class="character-icon-wrapper" data-character="walter">
+                  <img src="images/walter_gif.gif" alt="Walter White" class="character-icon">
+                  <span class="character-label">Walter</span>
+                </div>
+              </div>
+              <span class="minimize-button">&times;</span>
+            </div>
+            <div class="chat-body">
+              <div class="chat-messages" id="chatMessages">
+                <div class="message saul">
+                  <img src="images/saul_gif.gif" alt="Saul Goodman" class="saul-gif">
+                  <p>Hi!<br>Saul Goodman here, need help?</p>
+                </div>
+              </div>
+            </div>
+            <div class="chat-input">
+              <input type="text" id="userInput" placeholder="Your message...">
+              <button id="sendButton">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div id="minimizedChat" class="minimized-chat">
+            <img src="images/saul_gif.gif" alt="Saul Goodman" class="saul-gif">
+          </div>
+
+        </div>
+
+        <footer class="footer">
+          <div class="footer_content">
+            <div class="footer_contact">
+              <h3>Contact Information</h3>
+              <p>Phone: +7-228-239-13-37</p>
+              <p>Email: saulgoodman@edu.itmo.ru</p>
+              <p>Address: Vyasemskiy 3-5, University Campus, ITMO</p>
+            </div>
+            <div class="footer_disclaimer">
+              <p><del>Disclaimer:</del><br>Saul Goodman <strong>does not guarantee</strong> that you will not be kicked out of uni,<br> but <em>rest assured</em>, he’ll fight like hell for you!</p>
+            </div>
+            <div class="footer_load_info"></div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
